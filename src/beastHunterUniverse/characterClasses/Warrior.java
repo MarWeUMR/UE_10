@@ -6,7 +6,7 @@ public class Warrior {
 
     private Weapon weapon;
 
-    public <W extends Weapon> void equip(W w) {
-        this.weapon = w;
+    public <T extends Weapon> void equip(T t) {
+        this.weapon = t;
     }
 }
