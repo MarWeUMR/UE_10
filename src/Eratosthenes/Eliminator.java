@@ -20,9 +20,15 @@ public class Eliminator<E> implements java.util.Iterator<Integer> {
             int current = it.get();
             if ((current % this.n == 0) && (current >= Math.pow(this.n, 2))) {
                 it.remove();
-//                it.next();
+                if (it.isTail()) {
+                    break;
+                }
             } else {
-                it.next();
+                if (it.isTail()) {
+                    break;
+                } else {
+                    it.next();
+                }
             }
         }
     }

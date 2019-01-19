@@ -79,7 +79,7 @@ public class Iterator<E> implements java.util.Iterator<Integer> {
             currentPositon += 1;
             return i;
         } else {
-            currentPositon = 0;
+//            currentPositon = 0;
             return null;
         }
     }

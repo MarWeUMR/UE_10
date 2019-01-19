@@ -1,5 +1,7 @@
 package Eratosthenes;
 
+import java.util.List;
+
 public class Sieve implements java.util.Iterator<Integer> {
 
     Iterator<Integer> it;
@@ -12,13 +14,15 @@ public class Sieve implements java.util.Iterator<Integer> {
         this.lower = lower;
     }
 
+    public List<Integer> getSequence() {
+        return it.getSequence();
+    }
+
     public void sieving() {
-        for (int i = lower; i <= Math.sqrt(upper) ; i++) {
+        for (int i = lower; i <= Math.sqrt(upper); i++) {
             Eliminator<Integer> e = new Eliminator<>(i, it);
             e.filter();
         }
-
-        System.out.println(it.getSequence());
     }
 
     @Override
