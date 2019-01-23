@@ -26,18 +26,20 @@ public class Iterator<E> implements java.util.Iterator<Integer> {
         this.size = list.size();
     }
 
+    /**
+     * Setter for the current position within the list
+     *
+     * @param n current position
+     */
     public void setCurrentPositon(int n) {
         this.currentPositon = n;
     }
 
-    public int getCurrentPosition() {
-        return this.currentPositon;
-    }
-
-    public int getSize() {
-        return this.size;
-    }
-
+    /**
+     * Method to check if current element is last
+     *
+     * @return true if element is last
+     */
     public boolean isTail() {
         return (currentPositon + 1 == size);
     }
@@ -79,7 +81,6 @@ public class Iterator<E> implements java.util.Iterator<Integer> {
             currentPositon += 1;
             return i;
         } else {
-//            currentPositon = 0;
             return null;
         }
     }
